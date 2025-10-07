@@ -1,154 +1,87 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Simple, modern, responsive CSS */
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#0f172a;background:#f8fafc}
+.container{max-width:1100px;margin:0 auto;padding:1.25rem}
 
-body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #222;
-}
+/* Header */
+.site-header{background:#0b63ff;color:#fff;position:sticky;top:0;z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0}
+.logo{font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none}
+.logo span{color:#c6fffa}
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #0055ff;
-  color: #fff;
-}
+/* Nav */
+.nav{display:flex;gap:0.75rem;align-items:center}
+.nav-link{color:#fff;text-decoration:none;padding:0.45rem 0.6rem;border-radius:6px;opacity:0.95}
+.nav-link:hover{background:rgba(255,255,255,0.08)}
+.nav-link.active{box-shadow:inset 0 -2px 0 0 #c6fffa}
 
-.logo span {
-  color: #00e6ff;
-}
+/* buttons */
+.btn{background:#06b6d4;color:#041024;padding:0.5rem 0.85rem;border-radius:8px;border:none;cursor:pointer;text-decoration:none;display:inline-block;font-weight:600}
+.btn.small{padding:0.25rem 0.45rem;font-size:0.9rem}
+.btn.outline{background:transparent;border:2px solid rgba(4,16,36,0.06)}
+.menu-btn{display:none;background:transparent;border:none;color:#fff;font-size:1.25rem}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+/* Hero */
+.hero{padding:3rem 0;background:linear-gradient(180deg,rgba(6,182,212,0.06),rgba(11,99,255,0.03))}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.hero-text h1{font-size:2.1rem;margin-bottom:0.5rem}
+.lead{color:#334155;margin-top:0.6rem}
+.hero-media .cover{width:100%;height:320px;object-fit:cover;border-radius:12px}
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(8,15,20,0.04)}
 
-.nav-links a:hover,
-.nav-links a.active {
-  text-decoration: underline;
-}
+/* Projects */
+.projects h2{margin:1.25rem 0}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(8,15,20,0.04)}
 
-/* Mobile Menu */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-  background: url("../assets/images/hero.jpg") center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-
-.hero-content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background: #00e6ff;
-  color: black;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #00b3cc;
-}
+/* Slider */
+.slider{margin:2rem 0}
+.carousel{position:relative;overflow:hidden;background:transparent;border-radius:10px;padding:1rem}
+.slides{display:flex;transition:transform 0.45s ease}
+.slide{min-width:100%;padding:2rem;background:#fff;border-radius:8px;box-shadow:0 8px 20px rgba(2,6,23,0.04)}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.06);border:none;padding:0.5rem 0.8rem;border-radius:6px;cursor:pointer}
+.prev{left:8px}.next{right:8px}
 
 /* About */
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  gap: 2rem;
+.content{padding:2rem 0}
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:2rem;align-items:start}
+.profile{width:100%;height:280px;object-fit:cover;border-radius:12px}
+.skills{list-style:none;margin-top:0.5rem;padding-left:0}
+
+/* Contact form */
+.form-card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.04);max-width:700px}
+.form-card label{display:block;margin-top:0.5rem;font-weight:600}
+.form-card input,.form-card textarea{width:100%;padding:0.7rem;border-radius:8px;border:1px solid #e6eef6;margin-top:0.4rem}
+.form-row{display:flex;gap:1rem;align-items:center;margin-top:0.75rem}
+#formStatus{font-size:0.95rem;color:#0f172a}
+
+/* Footer */
+.site-footer{margin-top:2rem;background:#041024;color:#fff;padding:1rem 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+
+/* Small screens */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .nav{display:none}
+  .project-grid{gap:0.75rem}
+}
+@media (max-width:520px){
+  .project-grid{grid-template-columns:1fr}
+  .hero-media .cover{height:200px}
 }
 
-.about img {
-  width: 200px;
-  border-radius: 50%;
-}
-
-/* Contact */
-.contact {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-footer {
-  background: #0055ff;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #0055ff;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+/* Dark mode (class 'dark' on html) */
+:root{--bg:#f8fafc;--text:#0f172a}
+html.dark body{background:#071022;color:#e6eef6}
+html.dark .site-header{background:#061028}
+html.dark .nav-link{color:#dbeafe}
+html.dark .card,html.dark .project-card,html.dark .slide,html.dark .form-card{background:#071428;box-shadow:none}
+html.dark .btn{color:#021028}

@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Breeze Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Breeze Kid</title>
+<meta name="description" content="Contact Breeze Kid — get in touch." />
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Breeze<span>Kid</span></h1>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/">Breeze<span>Kid</span></a>
+    <nav class="nav" id="nav3">
+      <a href="/" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <button id="themeToggle3" class="btn small">Dark</button>
     </nav>
-  </header>
+    <button id="menuBtn3" class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
 
-  <main class="content">
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" required />
+<main class="container content">
+  <h1>Contact</h1>
+  <p>Want to work together? Fill the form or email <strong>info@zynsollabs.com</strong></p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
+  <form id="contactForm" class="form-card" novalidate>
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" required />
 
-        <label for="message">Message:</label>
-        <textarea id="message" required></textarea>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required />
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <p id="form-status"></p>
-    </section>
-  </main>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
 
-  <footer>
-    <p>&copy; 2025 Breeze Kid. All rights reserved.</p>
-  </footer>
+    <div class="form-row">
+      <button type="submit" class="btn">Send message</button>
+      <div id="formStatus" aria-live="polite"></div>
+    </div>
+  </form>
 
-  <script src="js/main.js"></script>
+  <aside class="contact-info">
+    <h3>Other ways</h3>
+    <p>LinkedIn / GitHub / Twitter — links you should add here.</p>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <p>© <span id="year3"></span> Breeze Kid — Nairobi</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

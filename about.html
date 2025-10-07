@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Breeze Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>About — Breeze Kid</title>
+<meta name="description" content="About Breeze Kid — skills, background, and projects." />
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Breeze<span>Kid</span></h1>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/">Breeze<span>Kid</span></a>
+    <nav class="nav" id="nav2">
+      <a href="/" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <button id="themeToggle2" class="btn small">Dark</button>
     </nav>
-  </header>
+    <button id="menuBtn2" class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
 
-  <main class="content">
-    <section class="about">
-      <img src="assets/images/profile.jpg" alt="Breeze Kid">
-      <div>
-        <h2>About Me</h2>
-        <p>I’m Breeze Kid — a passionate backend developer from Nairobi, Kenya. I build efficient, scalable web solutions with a focus on security, performance, and clean design.</p>
-        <p>My goal is to become one of the greatest software engineers solving Africa’s biggest problems with code.</p>
-      </div>
-    </section>
-  </main>
+<main class="container content">
+  <section class="about-grid">
+    <img class="profile" src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1200&auto=format&fit=crop" alt="Profile">
+    <div>
+      <h1>About Me</h1>
+      <p>I’m Breeze Kid — backend developer focused on Go, distributed systems, and secure APIs. I build maintainable systems that solve real problems in Africa and beyond.</p>
+      <h3>Skills</h3>
+      <ul class="skills">
+        <li>Go • Node.js • REST & gRPC</li>
+        <li>Postgres • Redis • Docker</li>
+        <li>CI/CD • Monitoring • Threat modelling</li>
+      </ul>
+      <h3>Approach</h3>
+      <p>Ship iteratively, measure, and harden. I prefer small, auditable changes over risky big-bang releases.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Breeze Kid. All rights reserved.</p>
-  </footer>
+  <section class="timeline">
+    <h2>Experience</h2>
+    <ol>
+      <li><strong>2024</strong> — Built a scalable URL shortener with Go & Postgres.</li>
+      <li><strong>2023</strong> — Contributor to open-source infra projects.</li>
+      <li><strong>2022</strong> — Led backend for small SaaS MVP.</li>
+    </ol>
+  </section>
+</main>
 
-  <script src="js/main.js"></script>
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <p>© <span id="year2"></span> Breeze Kid — Nairobi</p>
+    <p><small>Plain static site for portfolio & demos.</small></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
